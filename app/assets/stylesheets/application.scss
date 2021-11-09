@@ -1,0 +1,19 @@
+@import "bootstrap/scss/bootstrap";
+
+ul > li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: blue;
+  margin-top: 20px;
+}
+
+#details {
+  background-color: #F6F5F5;
+  padding: 15px;
+  width: 300px;
+  border-radius: 5px;
+  border: solid 1px #ECECEC;
+}
