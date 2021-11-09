@@ -3,14 +3,16 @@
 <p id="details"><%= @task.details %></p>
 
 <div class="div">
-  <label for="checkbox"> This task is <%= @task.completed ? 'completed' : 'not completed yet'%></label>
-  <input type="checkbox"<%='checked' if @task.completed%>>
+  <p>
+    This task is <%= @task.completed ? 'completed' : 'not completed yet'%>
+    <%if @task.completed %>
+      <i class="far fa-check-square"></i>
+    <% else %>
+      <i class="far fa-square"></i>
+    <% end %>
+  </p>
 </div>
 
-<button>
-  <%= link_to 'Edit task', edit_task_path %>
-</button>
-
-<button>
-  <%= link_to 'Back to List', tasks_path %>
-</button>
+<%= link_to 'Edit task', edit_task_path, class: 'btn btn-primary' %>
+<br>
+<%= link_to 'Back to List', tasks_path, class: 'btn btn-secondary' %>

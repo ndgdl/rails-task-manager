@@ -1,11 +1,3 @@
 <h1>New task</h1>
 
-<%= simple_form_for (@task) do |f| %>
-  <%= f.input :title %>
-  <%= f.input :details %>
-  <%= f.submit %>
-<% end %>
-
-<button>
-  <%= link_to 'Back to List', tasks_path %>
-</button>
+<%= render 'form', task: @task %>
